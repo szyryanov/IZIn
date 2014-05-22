@@ -29,7 +29,7 @@ The package requires [jQuery](http://jquery.com) library.
 How to use:
 -----------
 
-1. Download the [minified package](http://szyryanov.github.io/Portfolio/IZIn/dist/izin.min.zip). Also, you can download the [uncompressed package](http://szyryanov.github.io/Portfolio/IZIn/dist/izin.dev.zip), or the [full package](http://szyryanov.github.io/Portfolio/IZIn/dist/izin.zip) containing both versions.
+1. Download the [minified package](http://szyryanov.github.io/Portfolio/IZIn/files/izin.min.zip). Also, you can download the [uncompressed package](http://szyryanov.github.io/Portfolio/IZIn/files/izin.dev.zip), or the [full package](http://szyryanov.github.io/Portfolio/IZIn/files/izin.zip) containing both versions.
 2. Unzip the package into a directory on your website, e.g. /lib/izin
 3. Add the jQuery library reference on the page, if not added yet
 4. Add the izin.min.js (or izin.js) script reference on the page (the css file will be loaded by the script, you don't need to add it)
