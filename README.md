@@ -1,9 +1,5 @@
-IZIn
+IZIn - html <mark>I</mark>mages <mark>Z</mark>oom <mark>In</mark>/out feature
 ====
-
-html **I**mages **Z**oom **In**/out feature
-
-----------
 
 This JavaScript-based package allows you to add "image zoom in/out" feature to your HTML pages.
 
