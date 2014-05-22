@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>coordinates</title>
+
+    <script src="../../lib/jquery/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+    
+    <h3>Instructions:</h3>
+    <p>
+        Click an image or document body to show a cover. Check the cover offset and size to match the clicked element. Click the cover to hide it.
+    </p>
+
+    <h3>Images:</h3>
+    <p>
+        <img src="../../img/thumb.gif" />
+    </p>
+    <p>&nbsp;</p>
+
+    <h3>Test stuff:</h3>
+    <p>
+        <img src="../../img/thumb.gif" />
+    </p>
+    <p>&nbsp;</p>
+
+    <h3>Test stuff:</h3>
+    <p>
+        <img src="../../img/thumb.gif" />
+    </p>
+    <p>&nbsp;</p>
+
+    <h3>Test stuff:</h3>
+    <p>
+        <img src="../../img/thumb.gif" />
+    </p>
+    <p>&nbsp;</p>
+
+    <h3>Test stuff:</h3>
+    <p>
+        <img src="../../img/thumb.gif" />
+    </p>
+    <p>&nbsp;</p>
+
+    <style>
+        #cover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            background-color: lime;
+            opacity: 0.5;
+        }
+    </style>
+    <div id="cover"> </div>
+
+    <script src="../../js/Rect.js"></script>
+
+    <script>
+
+        $().ready(function () {
+
+            var $cover = $("#cover");
+
+            var emptyRect = new Rect();
+
+            function applyRect($element, rect) {
+                $element.css("top", rect.top);
+                $element.css("left", rect.left);
+                $element.width(rect.width);
+                $element.height(rect.height);
+            }
+            
+            $("img").click(function (event) {
+                event.stopPropagation();
+                applyRect($cover, Rect.getElementRect(this));
+            });
+            //
+            $("body").click(function (event) {
+                event.stopPropagation();
+                applyRect($cover, Rect.getWindowRect());
+            });
+            //
+            $cover.click(function (event) {
+                event.stopPropagation();
+                applyRect($cover, emptyRect);
+            });
+        });
+
+    </script>
+
+</body>
+</html>

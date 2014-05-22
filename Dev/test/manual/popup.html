@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>popup</title>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!--  different zoom popup cases css/html         -->
+    <!-- ============================================ -->
+
+    <style>
+
+        .img-zoom-background {
+            opacity: 0.4;
+            background-color: black;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            /*display: none;*/
+        }
+
+        .img-zoom-popup {
+            position: absolute;           
+            top: 0px;
+            left: 25px;
+            right: 25px;
+            min-height: 150px;
+
+            border: 5px solid white;
+            padding: 0px;
+            margin: 30px auto;
+            line-height: 1px;
+
+            background: silver;
+        }
+
+
+        img.img-zoom-loading {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto auto;
+        }
+
+        img.img-zoom-large {
+            margin: auto auto;
+            display:block;
+        }
+
+        img.img-zoom-large-low {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        p.img-zoom-error {
+            padding: 10px;
+            margin: 0;
+
+            font-family: Arial, Verdana;
+            font-size: 14px;
+            color: #333333;
+
+            word-wrap: break-word;
+            line-height: 1.5em;
+        }
+
+        p.img-zoom-error span {
+            font-weight: bold;
+        }
+
+        p.img-zoom-error a {
+            color: #0055cc;
+        }
+        p.img-zoom-error a:visited {
+            color: #aa0099;
+        }
+
+        #div1 {
+            top: 10px;
+            width: 300px;
+        }
+
+        #div2 {
+            top: 200px;
+            width: 300px;
+        }
+
+        #div3 {
+            top: 400px;
+            width: 300px;
+        }
+
+        #div4 {
+            top: 750px;
+            width: 300px;
+            height: 200px;
+        }
+
+        #div5 {
+            top: 1000px;
+            width: 300px;
+        }
+
+        #div6 {
+            top: 1200px;
+            width: 806px;
+        }
+
+        #div7 {
+            top: 1850px;
+            width: 1000px;
+        }
+
+        #div7 img {
+            width: 1000px;
+        }
+
+
+
+    </style>
+
+    <div class="img-zoom-background cursor-zoom-out"></div>
+
+    <!-- loading -->
+    <div id="div1" class="img-zoom-popup cursor-zoom-out"> 
+        <img class="img-zoom-loading" src="../../img/image-loading.gif"  />
+    </div>
+
+
+    <!-- not exists -->
+    <div id="div2" class="img-zoom-popup cursor-zoom-out"> 
+        <p class="img-zoom-error">
+            <span>Ошибка загрузки изображения:</span><br />
+            <a href="../../img/normal1.gif">http://not-exists.gif</a>
+        </p>
+    </div>
+
+    <!-- not exists 2 -->
+    <div id="div3" class="img-zoom-popup cursor-zoom-out"> 
+        <p class="img-zoom-error">
+            <span>Error loading image:</span><br />
+            <a href="../../img/normal1.gif">http://veryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongwordveryverylongword.gif</a>
+        </p>
+    </div>
+
+    <!-- small low -->
+    <div id="div4" class="img-zoom-popup cursor-zoom-out"> 
+        <img class="img-zoom-large img-zoom-large-low" src="../../img/thumb.gif" />
+    </div>
+
+    <!-- small -->
+    <div id="div5" class="img-zoom-popup cursor-zoom-out"> 
+        <img class="img-zoom-large" src="../../img/thumb.gif" />
+    </div>
+
+    <!-- normal -->
+    <div id="div6" class="img-zoom-popup cursor-zoom-out"> 
+        <img class="img-zoom-large" src="../../img/normal1.gif" />
+    </div>
+
+    <!-- big -->
+    <div id="div7" class="img-zoom-popup cursor-zoom-out"> 
+        <img class="img-zoom-large" src="../../img/GrandCanyon6.jpg" />
+    </div>
+
+
+</body>
+</html>

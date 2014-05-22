@@ -1,0 +1,25 @@
+{
+  "name": "IZIn",
+  "version": "0.1.0",
+  "description": "Image Zoom In feature",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-copy-to": "0.0.10",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-preprocess": "~4.0.0",
+    "grunt-bom2": "~0.1.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-cssmin": "~0.9.0",
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-zip": "~0.13.0",
+    "intern": "~1.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "szyryanov",
+  "license": "MIT"
+}

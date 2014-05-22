@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Resize</title>
+    <script src="../../lib/jquery/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    
+    <h3>Instructions:</h3>
+    <p>
+        Resize the window, check how the image div is resized.
+    </p>
+
+
+    <style>
+
+        .img-zoom-background {
+            opacity: 0.4;
+            background-color: black;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            /*display: none;*/
+        }
+
+        .img-zoom-popup {
+            position: absolute;           
+            top: 0px;
+            left: 25px;
+            right: 25px;
+            min-height: 150px;
+
+            border: 5px solid white;
+            padding: 0px;
+            margin: 30px auto;
+            line-height: 1px;
+
+            background: silver;
+        }
+
+
+        img.img-zoom-large {
+            margin: auto auto;
+            display:block;
+        }
+
+        #div7 {
+            top: 0px;
+            width: 1000px;
+        }
+
+        #div7 img {
+            width: 1000px;
+        }
+
+    </style>
+
+    <div class="img-zoom-background cursor-zoom-out"></div>
+
+    <!-- big -->
+    <div id="div7" class="img-zoom-popup cursor-zoom-out"> 
+        <img class="img-zoom-large" src="../../img/GrandCanyon6.jpg" />
+    </div>
+
+
+    <script src="../../js/my-underscore.js"></script>
+
+    <script>
+
+        var updateSize = function () {
+            var newWidth = $(window).width() - 60;
+            if (newWidth < 200) newWidth = 200;
+            //
+            $("#div7").width(newWidth);
+            $("#div7 img").width(newWidth);
+        };
+
+        var doUpdateSize = _debounce(updateSize, 150);
+
+        var handleResize = function () {
+            doUpdateSize();
+        };
+
+        updateSize();
+        //
+        $(window).resize(handleResize);
+
+
+    </script>
+
+</body>
+</html>

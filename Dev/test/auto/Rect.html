@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rect</title>
+
+    <script src="../../lib/jquery/jquery-1.10.2.min.js"></script>
+
+    <link href="../../lib/mocha/mocha.css" rel="stylesheet" />
+    <script src="../../lib/mocha/mocha.js"></script>
+
+    <script src="../../lib/chai/chai.js"></script>
+
+    <script src="../../js/Rect.js"></script>
+
+</head>
+<body>
+    
+  <div id="mocha"></div>
+
+  <script>mocha.setup('bdd')</script>
+
+    <script>
+
+        var assert = chai.assert;
+
+        describe('Rect tests', function () {
+
+            it('should create Rect', function () {
+                var r1 = new Rect(1, 2, 3, 4);
+                var r2 = new Rect(r1);
+                //
+                assert.equal(r2.left, 1);
+                assert.equal(r2.top, 2);
+                assert.equal(r2.width, 3);
+                assert.equal(r2.height, 4);
+            });
+
+            it('should create empty Rect', function () {
+                var emptyRect = new Rect();
+                //
+                assert.equal(emptyRect.left, 0);
+                assert.equal(emptyRect.top, 0);
+                assert.equal(emptyRect.width, 0);
+                assert.equal(emptyRect.height, 0);
+            });
+        });
+
+    </script>
+
+  <script>
+      mocha.checkLeaks();
+      mocha.globals(['jQuery']);
+      mocha.run();
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>loadImage</title>
+
+    <script src="../../lib/jquery/jquery-1.10.2.min.js"></script>
+
+    <!--link href="../../lib/mocha/mocha.css" rel="stylesheet" />
+    <script src="../../lib/mocha/mocha.js"></script>
+
+    <script src="../../lib/chai/chai.js"></script-->
+
+    <link href="../../lib/trifling-report/trifling-report.css" rel="stylesheet" />
+    <script src="../../lib/trifling-report/trifling-report.js"></script>
+
+</head>
+<body>
+    
+    <h3>Instructions:</h3>
+    <p>
+        Check the Report output: <strong>img2</strong> and <strong>img3</strong> must be loaded or completed, <strong>img4</strong> must report error.<br />
+        <br />
+        Click F5. Click "Test".<br />
+        Click Ctrl+F5 (reload all). Click "Test".
+    </p>
+
+    <h3>Summary:</h3>
+    <p id="summary">
+        Testing in progress (not completed, maybe because of an error).
+    </p>
+
+    <h3>Report:</h3>
+    <p id="report">
+    </p>
+
+    <h3>Test stuff:</h3>
+    <button id="btnTest">Test</button>
+    <p>
+        <img id="img1" src="../../img/normal1.gif" />
+        <img id="img2"  />
+        <img id="img3"  />
+        <img id="img4"  />
+    </p>
+
+
+    <script src="../../js/loadImage.js"></script>
+
+    <script>
+
+        function performTest() {
+            var waitCount = 3;
+            var everythingOk = true;
+
+            function checkCompleted() {
+                waitCount--;
+                if (waitCount <= 0) {
+                    if (everythingOk) {
+                        summaryOk();
+                    } else {
+                        summaryError();
+                    }
+                }
+            }
+
+            reportClear();
+            summaryNeutral("testing..");
+
+            loadImage($("#img2"), "../../img/normal1.gif", function (ok, status) {
+                reportAdd("img2: " + status);
+                if (!ok) everythingOk = false;
+                checkCompleted();
+            });
+            loadImage($("#img3"), "../../img/normal2.gif", function (ok, status) {
+                reportAdd("img3: " + status);
+                if (!ok) everythingOk = false;
+                checkCompleted();
+            });
+            loadImage($("#img4"), "../../img/not-exists.gif", function (ok, status) {
+                reportAdd("img4: " + status);
+                if (ok) everythingOk = false;
+                checkCompleted();
+            });
+        }
+
+        $().ready(function () {
+            $("#btnTest").click(function () { performTest(); });
+            //
+            performTest();
+        });
+
+
+
+        //summaryOk();
+        //reportAdd("some line");
+        //reportAdd("some line");
+        //reportAdd("some line");
+    </script>
+
+</body>
+</html>

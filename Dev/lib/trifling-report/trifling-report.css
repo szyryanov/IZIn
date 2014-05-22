@@ -1,0 +1,9 @@
+﻿
+.summary-ok {
+    background: lime;
+}
+
+.summary-error {
+    background: red;
+    color: white;
+}
