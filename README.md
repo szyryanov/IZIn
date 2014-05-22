@@ -1,9 +1,10 @@
-IZIn - html <mark>I</mark>mages <mark>Z</mark>oom <mark>In</mark>/out feature
-====
+IZIn - html Images Zoom In/out feature
+======================================
 
 This JavaScript-based package allows you to add "image zoom in/out" feature to your HTML pages.
 
-## How it looks
+How it looks
+-----------
 
 When a user moves a mouse over a thumb image, the mouse cursor becomes "zoom-in" one:
 
@@ -15,7 +16,8 @@ When a user clicks the thumb image, a popup animates to show a zoomed in image:
 
 If the full image size is larger than the browser window, then clicking the image again opens a new browser tab with full sized image. If the image with margins fits the browser window, then the second click closes the popup. Clicking the margin (between browser and popup boundaries) always closes the popup.
 
-## Demo
+Demo
+-----------
 
 Click [here](http://szyryanov.github.io/Portfolio/IZIn/index.html) to see it in action.
 
@@ -27,7 +29,7 @@ The package requires [jQuery](http://jquery.com) library.
 How to use:
 -----------
 
-1. Download the minified package. Also, you can download the uncompressed package, or the full package containing both versions.
+1. Download the [minified package](http://szyryanov.github.io/Portfolio/IZIn/dist/izin.min.zip). Also, you can download the [uncompressed package](http://szyryanov.github.io/Portfolio/IZIn/dist/izin.dev.zip), or the [full package](http://szyryanov.github.io/Portfolio/IZIn/dist/izin.zip) containing both versions.
 2. Unzip the package into a directory on your website, e.g. /lib/izin
 3. Add the jQuery library reference on the page, if not added yet
 4. Add the izin.min.js (or izin.js) script reference on the page (the css file will be loaded by the script, you don't need to add it)
