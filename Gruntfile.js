@@ -77,14 +77,14 @@ module.exports = function(grunt) {
             dist_dev: {
                 compression: 'DEFLATE',
                 cwd: 'MainTest/lib/izin/',
-                src: ['MainTest/lib/izin/izin.js', 'MainTest/lib/izin/izin.css', 'MainTest/lib/izin/*.cur'],
+                src: ['MainTest/lib/izin/izin.js', 'MainTest/lib/izin/izin.css', 'MainTest/lib/izin/*.cur', 'MainTest/lib/izin/*.gif'],
                 dest: 'Dist/izin.dev.zip'
 
             },
             dist_min: {
                 compression: 'DEFLATE',
                 cwd: 'MainTest/lib/izin/',
-                src: ['MainTest/lib/izin/izin.min.js', 'MainTest/lib/izin/izin.min.css', 'MainTest/lib/izin/*.cur'],
+                src: ['MainTest/lib/izin/izin.min.js', 'MainTest/lib/izin/izin.min.css', 'MainTest/lib/izin/*.cur', 'MainTest/lib/izin/*.gif'],
                 dest: 'Dist/izin.min.zip'
             },
             dist_all: {
