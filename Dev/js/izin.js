@@ -3,7 +3,8 @@
 (function ($, undefined) {
     "use strict";
 
-    // @include addSameCss.js
+    // @include izinEnv.js
+    // @include addCss.js
 
     // @include Rect.js
     // @include ZoomPopup.js

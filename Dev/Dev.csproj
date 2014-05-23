@@ -62,7 +62,7 @@
     <Content Include="cursor-zoom\zoom-in.cur" />
     <Content Include="cursor-zoom\zoom-out.cur" />
     <Content Include="img\GrandCanyon6.jpg" />
-    <Content Include="img\image-loading.gif" />
+    <Content Include="izin-images\image-loading.gif" />
     <Content Include="img\long.gif" />
     <Content Include="img\low.gif" />
     <Content Include="img\normal1.gif" />
@@ -70,10 +70,11 @@
     <Content Include="img\tall.gif" />
     <Content Include="img\thumb.gif" />
     <Content Include="index.html" />
-    <Content Include="js\addSameCss.js" />
+    <Content Include="js\addCss.js" />
     <Content Include="js\calcResizedHeight.js" />
     <Content Include="js\getImageNaturalSize.js" />
     <Content Include="js\izin.js" />
+    <Content Include="js\izinEnv.js" />
     <Content Include="js\main.js" />
     <Content Include="js\loadImage.js" />
     <Content Include="js\my-underscore.js" />
@@ -86,6 +87,7 @@
     <Content Include="lib\mocha\mocha.js" />
     <Content Include="lib\trifling-report\trifling-report.css" />
     <Content Include="lib\trifling-report\trifling-report.js" />
+    <Content Include="test\auto\calcScriptPathWithTrailingSlash.html" />
     <Content Include="test\auto\getImageNaturalSize.html" />
     <Content Include="test\auto\loadImage.html" />
     <Content Include="test\auto\Rect.html" />

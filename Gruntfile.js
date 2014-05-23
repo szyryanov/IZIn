@@ -26,6 +26,7 @@ module.exports = function(grunt) {
             stuff: {
                 files: [
                   { cwd: 'Dev/img/', src: ['**/*'], dest: 'MainTest/img/' },
+                  { cwd: 'Dev/izin-images/', src: ['**/*'], dest: 'MainTest/lib/izin/' },
                   { cwd: 'Dev/css/', src: ['izin.css'], dest: 'MainTest/lib/izin/' },
                   { cwd: 'Dev/cursor-zoom/', src: ['*.cur'], dest: 'MainTest/lib/izin/' },
                 ],

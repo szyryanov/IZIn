@@ -51,7 +51,7 @@ function ZoomPopup() {
             var html = '';
             //
             html += '<div class="img-zoom-popup img-zoom-hidden cursor-zoom-out"> \r\n';
-            html += '    <img class="img-zoom-loading" src="img/image-loading.gif"  /> \r\n';
+            html += '    <img class="img-zoom-loading" src="' + izin_env.url_image_loading + '"  /> \r\n';
             html += '    <a href="#" target="_blank" class="img-zoom-a-big"><img class="img-zoom-large" /></a> \r\n';
             html += '    <p class="img-zoom-error"> \r\n';
             html += '        <span>Error loading image:</span><br /> \r\n';

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>calcScriptPathWithTrailingSlash()</title>
+
+    <script src="../../lib/jquery/jquery-1.10.2.min.js"></script>
+
+    <link href="../../lib/mocha/mocha.css" rel="stylesheet" />
+    <script src="../../lib/mocha/mocha.js"></script>
+
+    <script src="../../lib/chai/chai.js"></script>
+
+    <script src="../../js/izinEnv.js"></script>
+
+</head>
+<body>
+    
+  <div id="mocha"></div>
+
+  <script>mocha.setup('bdd')</script>
+
+    <script>
+
+        var assert = chai.assert;
+
+        describe('calcScriptPathWithTrailingSlash()', function () {
+
+            it('should returns script path from script url', function () {
+                assert.equal(calcScriptPathWithTrailingSlash("/lib/izin/izin.js"), "/lib/izin/");
+                assert.equal(calcScriptPathWithTrailingSlash("/lib/izin/izin.min.js"), "/lib/izin/");
+                assert.equal(calcScriptPathWithTrailingSlash("/izin.min.js"), "/");
+                assert.equal(calcScriptPathWithTrailingSlash("js/addSameCss.js"), "js/");
+            });
+
+            it('should detect dev env', function () {
+                assert.equal(isDevEnv("/lib/izin/izin.js"), false);
+                assert.equal(isDevEnv("/lib/izin/izinEnv.js"), true);
+            });
+
+        });
+
+    </script>
+
+  <script>
+      mocha.checkLeaks();
+      mocha.globals(['jQuery']);
+      mocha.run();
+  </script>
+
+
+
+</body>
+</html>
