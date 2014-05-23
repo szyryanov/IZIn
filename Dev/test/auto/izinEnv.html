@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>calcScriptPathWithTrailingSlash()</title>
+    <title>izinEnv()</title>
 
     <script src="../../lib/jquery/jquery-1.10.2.min.js"></script>
 
@@ -35,6 +35,12 @@
             it('should detect dev env', function () {
                 assert.equal(isDevEnv("/lib/izin/izin.js"), false);
                 assert.equal(isDevEnv("/lib/izin/izinEnv.js"), true);
+            });
+
+            it('should detect minified version', function () {
+                assert.equal(isMinified("/lib/izin/izin.js"), false);
+                assert.equal(isMinified("/lib/izin/izin.min.js"), true);
+                assert.equal(isMinified("/lib/izin/izinEnv.js"), false);
             });
 
         });

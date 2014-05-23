@@ -87,7 +87,7 @@
     <Content Include="lib\mocha\mocha.js" />
     <Content Include="lib\trifling-report\trifling-report.css" />
     <Content Include="lib\trifling-report\trifling-report.js" />
-    <Content Include="test\auto\calcScriptPathWithTrailingSlash.html" />
+    <Content Include="test\auto\izinEnv.html" />
     <Content Include="test\auto\getImageNaturalSize.html" />
     <Content Include="test\auto\loadImage.html" />
     <Content Include="test\auto\Rect.html" />

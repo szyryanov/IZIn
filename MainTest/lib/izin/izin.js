@@ -19,6 +19,10 @@
         return /izinEnv.js/.test(url_js);
     }
     
+    function isMinified(url_js) {
+        return /.min.js/.test(url_js);
+    }
+    
     function setupEnv() {
         var url_js = calcThisScriptSrc();
         if (isDevEnv(url_js)) {
@@ -26,7 +30,7 @@
             izin_env.url_image_loading = "../izin-images/image-loading.gif";
         } else {
             var path = calcScriptPathWithTrailingSlash(url_js);
-            izin_env.url_css = path + "izin.css";
+            izin_env.url_css = path + (isMinified(url_js) ? "izin.min.css" : "izin.css");
             izin_env.url_image_loading = path + "image-loading.gif";
         }
     }
