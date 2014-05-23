@@ -1,7 +1,8 @@
 IZIn - html Images Zoom In/out feature
 ======================================
 
-This JavaScript-based package allows you to add "image zoom in/out" feature to your HTML pages.
+This JavaScript-based package allows you to add "image zoom in/out" feature to your HTML pages;
+version 1.0.1
 
 How it looks
 -----------
